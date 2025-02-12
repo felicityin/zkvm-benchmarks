@@ -243,6 +243,7 @@ fn benchmark_sha2_chain(iters: u32) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_sha2_chain start, iters: {}", iters);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -252,6 +253,7 @@ fn benchmark_sha2_chain(iters: u32) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_sha2_chain end, duration: {:?}", duration.as_secs_f64());
 
     let _hash =  state.read_public_values::<[u8; 32]>();
 
@@ -269,6 +271,7 @@ fn benchmark_sha3_chain(iters: u32) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_sha3_chain start, iters: {}", iters);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -278,6 +281,7 @@ fn benchmark_sha3_chain(iters: u32) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_sha3_chain end, duration: {:?}", duration.as_secs_f64());
 
     let _hash =  state.read_public_values::<[u8; 32]>();
 
@@ -294,6 +298,7 @@ fn benchmark_sha2(num_bytes: usize) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_sha2 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -303,6 +308,7 @@ fn benchmark_sha2(num_bytes: usize) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_sha2 end, duration: {:?}", duration.as_secs_f64());
 
     let _hash =  state.read_public_values::<[u8; 32]>();
 
@@ -319,6 +325,7 @@ fn benchmark_sha3(num_bytes: usize) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_sha3 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -328,6 +335,7 @@ fn benchmark_sha3(num_bytes: usize) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_sha3 end, duration: {:?}", duration.as_secs_f64());
 
     let _hash =  state.read_public_values::<[u8; 32]>();
 
@@ -343,6 +351,7 @@ fn benchmark_fibonacci(n: u32) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_fibonacci start, n: {}", n);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -352,6 +361,7 @@ fn benchmark_fibonacci(n: u32) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_fibonacc end, duration: {:?}", duration.as_secs_f64());
 
     let _output = state.read_public_values::<u128>();
     (duration, size)
@@ -366,6 +376,7 @@ fn benchmark_bigmem(value: u32) -> (Duration, usize) {
 
     let (_total_steps, seg_num, mut state) = split_prog_into_segs(state, seg_path, "", seg_size);
 
+    println!("benchmark_bigmem start, value: {}", value);
     let start = Instant::now();
     let size = if seg_num == 1 {
         let seg_file = format!("{seg_path}/{}", 0);
@@ -375,6 +386,7 @@ fn benchmark_bigmem(value: u32) -> (Duration, usize) {
     };
     let end = Instant::now();
     let duration = end.duration_since(start);
+    println!("benchmark_bigmem end, duration: {:?}", duration.as_secs_f64());
 
     let _output = state.read_public_values::<u32>();
     (duration, size)

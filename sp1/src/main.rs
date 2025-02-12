@@ -80,7 +80,7 @@ fn benchmark_sha2_chain(iters: u32) -> (Duration, usize) {
     stdin.write(&input);
     stdin.write(&iters);
 
-    println!("benchmark_sha2_chain start");
+    println!("benchmark_sha2_chain start, iters: {}", iters);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
@@ -101,7 +101,7 @@ fn benchmark_sha3_chain(iters: u32) -> (Duration, usize) {
     stdin.write(&input);
     stdin.write(&iters);
 
-    println!("benchmark_sha3_chain start");
+    println!("benchmark_sha3_chain start, iters: {}", iters);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
@@ -121,7 +121,7 @@ fn benchmark_sha2(num_bytes: usize) -> (Duration, usize) {
     let input = vec![5u8; num_bytes];
     stdin.write(&input);
 
-    println!("benchmark_sha2 start");
+    println!("benchmark_sha2 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
@@ -141,12 +141,12 @@ fn benchmark_sha3(num_bytes: usize) -> (Duration, usize) {
     let input = vec![5u8; num_bytes];
     stdin.write(&input);
 
-    println!("benchmark_sha3 start");
+    println!("benchmark_sha3 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
-    println!("benchmark_sha2_chain end, duration: {:?}", duration.as_secs_f64());
+    println!("benchmark_sha3_chain end, duration: {:?}", duration.as_secs_f64());
 
     client.verify(&proof, &vk).expect("verification failed");
 
@@ -160,7 +160,7 @@ fn bench_fibonacci(n: u32) -> (Duration, usize) {
     let mut stdin = SP1Stdin::new();
     stdin.write(&n);
 
-    println!("benchmark_fibonacci start");
+    println!("benchmark_fibonacci start, n: {}", n);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
@@ -179,7 +179,7 @@ fn bench_bigmem(value: u32) -> (Duration, usize) {
     let mut stdin = SP1Stdin::new();
     stdin.write(&value);
 
-    println!("benchmark_bigmem start");
+    println!("benchmark_bigmem start, value: {}", value);
     let start = Instant::now();
     let proof = client.prove(&pk, &stdin).run().unwrap();
     let end = Instant::now();
