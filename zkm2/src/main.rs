@@ -82,7 +82,7 @@ fn benchmark_sha2_chain(iters: u32) -> (Duration, usize) {
 
     println!("benchmark_sha2_chain start, iters: {}", iters);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_sha2_chain end, duration: {:?}", duration.as_secs_f64());
@@ -103,7 +103,7 @@ fn benchmark_sha3_chain(iters: u32) -> (Duration, usize) {
 
     println!("benchmark_sha3_chain start, iters: {}", iters);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_sha3_chain end, duration: {:?}", duration.as_secs_f64());
@@ -123,7 +123,7 @@ fn benchmark_sha2(num_bytes: usize) -> (Duration, usize) {
 
     println!("benchmark_sha2 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_sha2 end, duration: {:?}", duration.as_secs_f64());
@@ -143,7 +143,7 @@ fn benchmark_sha3(num_bytes: usize) -> (Duration, usize) {
 
     println!("benchmark_sha3 start, num_bytes: {}", num_bytes);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_sha3 end, duration: {:?}", duration.as_secs_f64());
@@ -162,7 +162,7 @@ fn bench_fibonacci(n: u32) -> (Duration, usize) {
 
     println!("benchmark_fibonacci start, n: {}", n);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_fibonacc end, duration: {:?}", duration.as_secs_f64());
@@ -181,7 +181,7 @@ fn bench_bigmem(value: u32) -> (Duration, usize) {
 
     println!("benchmark_bigmem start, value: {}", value);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, stdin).core().run().unwrap();
+    let proof = client.prove(&pk, stdin).run().unwrap();
     let end = Instant::now();
     let duration = end.duration_since(start);
     println!("benchmark_bigmem end, duration: {:?}", duration.as_secs_f64());
