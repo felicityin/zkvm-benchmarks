@@ -4154,8 +4154,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-build"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "anyhow",
  "cargo_metadata",
@@ -4166,8 +4166,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-core-executor"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "bincode",
  "bytemuck",
@@ -4204,8 +4204,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-core-machine"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "bincode",
  "cbindgen",
@@ -4260,8 +4260,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-cuda"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "bincode",
  "ctrlc",
@@ -4276,8 +4276,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-curves"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "cfg-if",
  "dashu",
@@ -4297,8 +4297,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-derive"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -4306,8 +4306,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-primitives"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "bincode",
  "hex",
@@ -4323,8 +4323,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-prover"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "anyhow",
  "bincode",
@@ -4365,8 +4365,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-recursion-circuit"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "hashbrown 0.14.5",
  "itertools 0.13.0",
@@ -4399,8 +4399,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-recursion-compiler"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "backtrace",
  "itertools 0.13.0",
@@ -4420,8 +4420,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-recursion-core"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "backtrace",
  "cbindgen",
@@ -4462,8 +4462,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-recursion-derive"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -4471,8 +4471,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-recursion-gnark-ffi"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "anyhow",
  "bincode",
@@ -4508,8 +4508,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-sdk"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "alloy-primitives",
  "alloy-signer",
@@ -4554,8 +4554,8 @@ dependencies = [
 
 [[package]]
 name = "sp1-stark"
-version = "4.1.1"
-source = "git+https://github.com/succinctlabs/sp1.git?rev=c97ccf2#c97ccf2eb7d14bd3559e41c9717657491b0d1296"
+version = "4.1.2"
+source = "git+https://github.com/felicityin/sp1.git?branch=statistics#0dea54acad97bdf6f507ad69e164ee48deb5645a"
 dependencies = [
  "arrayref",
  "hashbrown 0.14.5",

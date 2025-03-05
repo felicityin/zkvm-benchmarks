@@ -12,7 +12,7 @@ bincode = "1.3.3"
 # zkm2-core-machine = { git = "https://github.com/zkMIPS/zkm2.git", branch = "dev/init" }
 # zkm2-sdk = { git = "https://github.com/zkMIPS/zkm2.git", branch = "dev/init" }
 zkm2-build = { path = "../../zkm2/crates/build" }
-zkm2-core-machine = { path = "../../zkm2/crates/core/machine" }
+zkm2-core-machine = { path = "../../zkm2/crates/core/machine", features = ["debug"] }
 zkm2-sdk = { path = "../../zkm2/crates/sdk" }
 
 [build-dependencies]
