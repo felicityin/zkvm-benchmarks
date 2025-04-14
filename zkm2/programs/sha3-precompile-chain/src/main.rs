@@ -1,7 +1,5 @@
 #![no_main]
 
-use sha3::{Digest, Keccak256};
-
 zkm_zkvm::entrypoint!(main);
 use zkm_zkvm::lib::sha3::sha3_256;
 pub fn main() {
