@@ -1,5 +1,5 @@
 use utils::benchmark_v2;
-use zkm2_script::{benchmark_sha3_precompile, init_logger};
+use zkm_script::{benchmark_sha3_precompile, init_logger};
 
 fn main() {
     init_logger();
