@@ -26,6 +26,12 @@ pub fn bench_tendermint(_v: u32) -> (Duration, usize, u64) {
     stdin.write_vec(encoded_1);
     stdin.write_vec(encoded_2);
 
+    let stdin1 = bincode::serialize(&stdin).unwrap();
+    std::fs::write("tendermint-stdin.bin", stdin1).unwrap();
+
+    let stdin = std::fs::read("tendermint-stdin.bin").unwrap();
+    let stdin: ZKMStdin = bincode::deserialize(&stdin).unwrap();
+
     // TODO: normally we could just write the LightBlock, but bincode doesn't work with LightBlock.
     // The following code will panic.
     // let encoded: Vec<u8> = bincode::serialize(&light_block_1).unwrap();
