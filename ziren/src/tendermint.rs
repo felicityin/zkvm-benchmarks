@@ -38,12 +38,23 @@ pub fn bench_tendermint(_v: u32) -> (Duration, usize, u64) {
     // let decoded: LightBlock = bincode::deserialize(&encoded[..]).unwrap();
 
     let client = ProverClient::new();
+
+    // Execute the program using the `ProverClient.execute` method, without generating a proof.
+    let (_, report) = client
+        .execute(TENDERMINT_ELF, stdin.clone())
+        .run()
+        .expect("proving failed");
+    println!(
+        "executed program with {} cycles",
+        report.total_instruction_count()
+    );
+
     let (pk, vk) = client.setup(TENDERMINT_ELF);
 
     println!("benchmark_tendermint start");
     let start = Instant::now();
     let proof = client
-        .prove(&pk, stdin.clone())
+        .prove(&pk, stdin)
         .run()
         .expect("proving failed");
     let end = Instant::now();
@@ -63,16 +74,6 @@ pub fn bench_tendermint(_v: u32) -> (Duration, usize, u64) {
     expected_public_values.extend(serde_cbor::to_vec(&expected_verdict).unwrap());
 
     assert_eq!(proof.public_values.as_ref(), expected_public_values);
-
-    // Execute the program using the `ProverClient.execute` method, without generating a proof.
-    let (_, report) = client
-        .execute(TENDERMINT_ELF, stdin)
-        .run()
-        .expect("proving failed");
-    println!(
-        "executed program with {} cycles",
-        report.total_instruction_count()
-    );
 
     (duration, size(&proof), report.total_instruction_count())
 }
